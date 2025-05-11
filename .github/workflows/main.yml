@@ -11,5 +11,5 @@ jobs: # Definición de los trabajos a ejecutar.
         uses: actions/checkout@v3 # Acción que clona el repositorio en el entorno de trabajo.
 
       - name: importando action creado # Nombre del paso.
-        users: ./.github/actions/my-actions # Acción que se ejecuta en el paso.
+        uses: ./.github/actions/my-actions # Acción que se ejecuta en el paso.
 
