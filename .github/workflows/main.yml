@@ -1,0 +1,15 @@
+name: Test Composite Action # Nombre del flujo de trabajo.
+
+on: [push] # Evento que dispara el flujo de trabajo, en este caso, un push.
+
+jobs: # Definición de los trabajos a ejecutar.
+  local-action: # Nombre del trabajo.
+    runs-on: ubuntu-latest # Especifica el sistema operativo donde se ejecutará el trabajo.
+
+    steps: # Pasos del trabajo.
+      - name: Checkout code # Nombre del paso.
+        uses: actions/checkout@v3 # Acción que clona el repositorio en el entorno de trabajo.
+
+      - name: importando action creado # Nombre del paso.
+        users: ./.github/actions/my-actions # Acción que se ejecuta en el paso.
+

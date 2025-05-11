@@ -1,0 +1,9 @@
+name: "my action" # Nombre de la acción.
+description: "test my action" # Descripción de la
+
+# acción.
+runs: # Sección que define cómo se ejecuta la acción.
+  using: "composite" # Tipo de acción, en este caso, una acción compuesta.
+  steps: # Pasos de la acción.
+    - name: hola mundo # Nombre del paso.
+      run: echo "Hola mundo" # Comando que imprime "Hola mundo" en la consola.
