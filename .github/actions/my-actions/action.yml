@@ -7,3 +7,4 @@ runs: # Sección que define cómo se ejecuta la acción.
   steps: # Pasos de la acción.
     - name: hola mundo # Nombre del paso.
       run: echo "Hola mundo" # Comando que imprime "Hola mundo" en la consola.
+      shell: bash # Especifica el shell a utilizar, en este caso, bash.
