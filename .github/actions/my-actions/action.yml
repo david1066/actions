@@ -1,10 +1,21 @@
 name: "my action" # Nombre de la acción.
 description: "test my action" # Descripción de la
+inputs: # Sección que define los inputs de la acción.
+  message: # Nombre del input.
+    description: "message to print" # Descripción del input.
+    required: true # Indica que este input es obligatorio.
+    default: "Hola parametro" # Valor por defecto del input.
+  name: # Nombre del input.
+    description: "name to print" # Descripción del input.
+    required: false # Indica que este input es obligatorio.
+    default: "Daniela" # Valor por defecto del input.
 
 # acción.
 runs: # Sección que define cómo se ejecuta la acción.
   using: "composite" # Tipo de acción, en este caso, una acción compuesta.
   steps: # Pasos de la acción.
     - name: hola mundo # Nombre del paso.
-      run: echo "Hola mundo" # Comando que imprime "Hola mundo" en la consola.
+      run: |  
+      echo "Hola mundo" # Comando que imprime "Hola mundo" en la consola.
+      echo "${{ inputs.message }} ${{ inputs.name }}" # Imprime el mensaje pasado como input.
       shell: bash # Especifica el shell a utilizar, en este caso, bash.

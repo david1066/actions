@@ -12,4 +12,6 @@ jobs: # Definición de los trabajos a ejecutar.
 
       - name: importando action creado # Nombre del paso.
         uses: ./.github/actions/my-actions # Acción que se ejecuta en el paso.
-
+        with: # Parámetros de entrada para la acción.
+          message: "Hola" # Mensaje de entrada.
+          name: "David" # Nombre de entrada.
